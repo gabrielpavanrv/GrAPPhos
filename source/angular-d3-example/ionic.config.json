@@ -1,7 +1,0 @@
-{
-  "name": "angular-d3-example",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
-}

@@ -25,7 +25,7 @@ export class PintorGeral {
           data: { weight: 10, label: configuracoesDeCriacao.contagem},
           position: { x: evt.position.x, y:evt.position.y  },
           style:{
-            'background-color': this.getRandomColor(),
+            'background-color': 'black',
             'border-width': 2,
             'border-color': 'white',
             "text-valign": "center",

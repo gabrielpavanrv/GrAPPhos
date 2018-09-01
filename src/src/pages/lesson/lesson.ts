@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LessonPage {
 
-  lesson:string = "Hello";
+  lesson:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.lesson = this.navParams.get('lesson')
   }

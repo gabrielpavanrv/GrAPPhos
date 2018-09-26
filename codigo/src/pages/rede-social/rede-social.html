@@ -1,0 +1,28 @@
+<ion-content padding>
+  <!-- The "cyRS" div holds the graph's drawing canvas  -->
+  <div id="cyRS" (tap)="atualizarEquacaoLatex()" (press)="atualizarEquacaoLatex()"></div>
+  
+  <!-- The "equation" section tag holds and writes down our graph's data -->
+  <section class='equation' >
+    <!-- "limit class" stylizes our equation and automatically adds a scroll bar if it overflows
+    its parent's width -->
+    <div class='limit'>
+      <ng-katex equation="G=(V,E)"></ng-katex>
+    </div>
+
+    <div class='limit'>
+      <ng-katex equation='V='></ng-katex>
+      <ng-katex [equation]="vertices" [options]="options"></ng-katex>
+    </div>
+    
+    <div class='limit'>
+      <ng-katex equation='E='></ng-katex>
+      <ng-katex [equation]="arestas"></ng-katex>
+    </div>    
+  </section>
+
+  <section class='wall-of-text'>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis pariatur amet error itaque, aut, molestias, facere dolor alias rerum fugiat temporibus iure mollitia tempora modi architecto nemo! Quo, molestias eos?
+  </section>
+
+</ion-content>

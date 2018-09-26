@@ -49,20 +49,13 @@ export class ExplorarConstelacoes_2Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.configuradorDeAreaDeDesenho = new ConfiguradorDeAreaDeDesenho();
-
     console.log("OLHAAAAA:"+this.navParams.get('grafo'));
-    
-
   }
 
   ionViewDidLoad() {
 
-
-
-
     this.configuracoesDeCriacao = new ConfiguracoesDeCriacao();
-    this.grafoInterface = this.configuradorDeAreaDeDesenho.gerarGrafo(this.configuracoesDeCriacao, "cyExplorar2");
-    
+    this.grafoInterface = this.configuradorDeAreaDeDesenho.gerarGrafo("cyExplorar2");
     this.configuradorDeAreaDeDesenho.adicionarEventosAreaDeDesenhoGrafoGeral(this.grafoInterface, this.configuracoesDeCriacao, "explorar-constelacoes-1");
     this.grafoInterface.json(this.navParams.get('grafo'));
     this.configuracoesDeCriacao.contagem=0;
@@ -83,14 +76,13 @@ export class ExplorarConstelacoes_2Page {
   }
 
   clicouGerar() {
-
     this.configuracoesDeCriacao.possivelCriarNo = 1;
   }
 
   clicouLimpar(){
 
     this.grafoInterface.destroy();
-    this.grafoInterface = this.configuradorDeAreaDeDesenho.gerarGrafo(this.configuracoesDeCriacao, "cyExplorar2");
+    this.grafoInterface = this.configuradorDeAreaDeDesenho.gerarGrafo("cyExplorar2");
     this.configuradorDeAreaDeDesenho.adicionarEventosAreaDeDesenhoGrafoGeral(this.grafoInterface, this.configuracoesDeCriacao, "explorar-constelacoes-1");
     this.atualizarEquacaoLatex();
     this.configuracoesDeCriacao.contagem=0;

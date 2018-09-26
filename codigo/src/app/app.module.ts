@@ -9,16 +9,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { InicioPage } from '../pages/inicio/inicio';
 import { ComponentsModule } from '../components/components.module';
-import { HttpClient } from '@angular/common/http';
 import { GrafoGeralProvider } from '../providers/grafo-geral/grafo-geral';
 import { KatexModule } from 'ng-katex';
 import { CommonModule } from '@angular/common';
 import { PixiModule} from 'angular2pixi';
-
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -32,10 +26,7 @@ import { PixiModule} from 'angular2pixi';
     ComponentsModule,
     KatexModule,
     CommonModule,
-    PixiModule
-
-    
-  
+    PixiModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

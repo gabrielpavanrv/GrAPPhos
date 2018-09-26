@@ -6,7 +6,6 @@ export class ConfiguracoesDeCriacao {
     public possivelCriarAresta:number;
 
     constructor(){
-
         this.possivelCriarNo=this.contagem = 1;
         this.possivelCriarAresta = 0;
         this.noAnterior=undefined;

@@ -25,7 +25,7 @@ export class HomePage {
   ionViewDidLoad() 
   {
     this.configuracoesDeCriacao = new ConfiguracoesDeCriacao();
-    this.grafoInterface= this.configuradorDeAreaDeDesenho.gerarGrafo(this.configuracoesDeCriacao,"cy");
+    this.grafoInterface= this.configuradorDeAreaDeDesenho.gerarGrafo("cy");
     this.configuradorDeAreaDeDesenho.adicionarEventosAreaDeDesenhoGrafoGeral(this.grafoInterface,this.configuracoesDeCriacao);
   }
 

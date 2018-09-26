@@ -1,6 +1,3 @@
-import * as cytoscape from './../assets/cytoscape'
-
-
 export class ConstrutorDeGrafoTeorico {
 
   public construirGrafoTeorico(cy, naoDir) {
@@ -43,7 +40,7 @@ export class ConstrutorDeGrafoTeorico {
     })
 
 
-
+    console.log(GrafoTeorico);
     return GrafoTeorico;
 
   }

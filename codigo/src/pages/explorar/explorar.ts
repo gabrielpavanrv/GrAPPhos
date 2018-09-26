@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Mundos } from './mundos'
 /**
  * Generated class for the ExplorarPage page.
  *
@@ -14,12 +14,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'explorar.html',
 })
 export class ExplorarPage {
+
+  mundos:Mundos = new Mundos();
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   startExplocaracao(nomeExploracao:string)
   {
-    this.navCtrl.push('ExplorarConstelacoesPage');
+    this.navCtrl.push(nomeExploracao);
   }
 
 
